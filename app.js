@@ -6,7 +6,6 @@ let attempsEl = document.getElementById("attempts")
 let textEl = document.getElementById("text")
 let textEl2 = document.getElementById("text2")
 let content = document.getElementById("content")
-let lettersUsedEl = document.getElementById("lettersUsed")
 let secretWordEl = document.getElementById("secretWord")
 let StartBtnBox = document.getElementById("startBtnBox")
 
@@ -286,11 +285,10 @@ StartBtn.addEventListener('click', function() {
                     textEl2.textContent = keyWord
                     textEl2.className = "keyword"
                     attempsEl.remove("attemps-el")
-                    lettersUsedEl.remove("lettersUsed")
                     let newGame = document.createElement('button')
                     newGame.className = "NewGameBtn"
                     newGame.innerHTML = "New Game"
-                    content.appendChild(newGame)
+                    StartBtnBox.appendChild(newGame)
                     newGame.addEventListener("click", function() {
                         location.reload()
                     })
@@ -302,11 +300,10 @@ StartBtn.addEventListener('click', function() {
                     textEl2.textContent = keyWord
                     textEl2.className = "keyword"
                     attempsEl.remove("attemps-el")
-                    lettersUsedEl.remove("lettersUsed")
                     let newGame = document.createElement('button')
                     newGame.className = "NewGameBtn"
                     newGame.innerHTML = "New Game"
-                    content.appendChild(newGame)
+                    StartBtnBox.appendChild(newGame)
                     newGame.addEventListener("click", function() {
                         location.reload()
                     })
@@ -321,6 +318,22 @@ StartBtn.addEventListener('click', function() {
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
 
 
