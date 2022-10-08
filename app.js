@@ -8,6 +8,7 @@ let textEl2 = document.getElementById("text2")
 let content = document.getElementById("content")
 let lettersUsedEl = document.getElementById("lettersUsed")
 let secretWordEl = document.getElementById("secretWord")
+let StartBtnBox = document.getElementById("startBtnBox")
 
 
 let userinput = ""
@@ -23,20 +24,6 @@ deleteBtn.addEventListener('click', function() {
     inputBtn.textContent = inputBtn.textContent.slice(0, -1)
     userinput = userinput.slice(0, -1)
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -248,17 +235,19 @@ StartBtn.addEventListener('click', function() {
                     let newGame = document.createElement('button')
                     newGame.className = "NewGameBtn"
                     newGame.innerHTML = "New Game"
-                    content.appendChild(newGame)
+                    StartBtnBox.appendChild(newGame)
                     newGame.addEventListener("click", function() {
                         location.reload()
                     })
                     
                 } else if (userinput != keyWord) {
+                    if(userinput.length == 1) {
+                        let key = userinput.toUpperCase()
+                        let keyboardKey = document.getElementById(key)
+                        keyboardKey.classList.add("used")
+                    }     
                     textEl.textContent = "Try again!"
                     textEl.className = "Wrong"
-                    let key = userinput.toUpperCase()
-                    let keyboardKey = document.getElementById(key)
-                    keyboardKey.classList.add("used")
                     
                 } 
                 if (guessedLetter == true) {
@@ -330,24 +319,4 @@ StartBtn.addEventListener('click', function() {
         
     
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
 
