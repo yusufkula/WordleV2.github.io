@@ -55,7 +55,7 @@ StartBtn.addEventListener('click', function() {
 
 
     function printGuessedLetter() {
-        wordEl.textContent = "Your secret word is: " + userGuessList
+        wordEl.textContent = userGuessList
     }
 
     for (let i = 0; i < keyWord.length; i++) {
@@ -319,4 +319,8 @@ StartBtn.addEventListener('click', function() {
         
     
 })
+
+
+
+
 
