@@ -43,7 +43,7 @@ function randomWord(wordList) {
 }
 
 keyWord = randomWord(words)
-let attemps = keyWord.length + 2
+let attemps = keyWord.length + 5
 console.log(keyWord)
 
 
@@ -350,4 +350,3 @@ function registerKeyboardEvents() {
 
 registerKeyboardEvents()
 
-    
